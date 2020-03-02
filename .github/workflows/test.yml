@@ -14,4 +14,9 @@ jobs:
           iwr -useb get.scoop.sh | iex
           scoop install aria2
           scoop install llvm
+          
+      - name: RefreshEnv
+        run: RefreshEnv
       
+      - name: Test
+        run: scoop
