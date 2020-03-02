@@ -10,7 +10,9 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Install scoop
-        run: iwr -useb get.scoop.sh | iex
+        run: |
+          iwr -useb get.scoop.sh | iex
+          scoop
         
       - name: Test
-        run: scoop
+        run: scoop.exe
