@@ -11,9 +11,7 @@ jobs:
 
       - name: Install stuff
         run: |
-          iwr -useb get.scoop.sh | iex
-          scoop install aria2
-          scoop install --global llvm
+          choco install llvm
           
       - name: Test
         run: clang
