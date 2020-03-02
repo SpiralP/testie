@@ -8,6 +8,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+        
+      - name: test
+        run: |
+          echo "::set-env name=action_state::yellow"
+          echo $action_state
+
+      - name: test2
+        run: |
+          echo $action_state
+          
+          
 
       - name: Install stuff
         run: |
