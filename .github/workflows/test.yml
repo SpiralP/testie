@@ -12,7 +12,7 @@ jobs:
       - name: Install stuff
         run: |
           iwr -useb get.scoop.sh | iex
-          pwd
+          Resolve-Path ~
           echo "##[add-path]~\scoop\shims"
           scoop install aria2
           scoop install llvm
