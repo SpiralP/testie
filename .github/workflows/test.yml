@@ -9,10 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Install scoop
+      - name: Install stuff
         run: |
           iwr -useb get.scoop.sh | iex
-          scoop
-        
-      - name: Test
-        run: scoop.exe
+          scoop install aria2
+          scoop install llvm
+      
