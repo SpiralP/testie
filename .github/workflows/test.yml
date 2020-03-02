@@ -11,9 +11,10 @@ jobs:
 
       - name: Install stuff
         run: |
-          choco install llvm
-          echo "##[add-path]C:\Program Files\LLVM\bin"
+          iwr -useb get.scoop.sh | iex
+          echo "##[add-path]~\scoop\shims"
+          scoop install aria2
+          scoop install llvm
 
-      - name: Test
-        run: clang
-      
+      - name: clang
+        run: clang --version
