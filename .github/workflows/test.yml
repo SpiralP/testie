@@ -13,6 +13,7 @@ jobs:
         run: |
           iwr -useb get.scoop.sh | iex
           echo "##[add-path]C:\Users\runneradmin\scoop\shims"
+          echo "##[add-path]C:\ProgramData\scoop\shims"
           scoop install aria2
           scoop install llvm
 
