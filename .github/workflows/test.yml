@@ -13,7 +13,7 @@ jobs:
         run: |
           iwr -useb get.scoop.sh | iex
           scoop install aria2
-          scoop install llvm
+          scoop install --global llvm
           
       - name: Test
         run: clang
