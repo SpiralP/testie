@@ -12,7 +12,8 @@ jobs:
       - name: Install stuff
         run: |
           choco install llvm
-          
+          echo "##[add-path]C:\Program Files\LLVM\bin"
+
       - name: Test
         run: clang
       
