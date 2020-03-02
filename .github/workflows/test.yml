@@ -13,10 +13,8 @@ jobs:
         run: |
           iwr -useb get.scoop.sh | iex
           scoop install aria2
-          scoop install -g llvm
+          scoop install llvm
           
-      - name: RefreshEnv
-        run: RefreshEnv
-      
       - name: Test
-        run: scoop
+        run: clang
+      
